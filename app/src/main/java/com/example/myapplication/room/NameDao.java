@@ -25,8 +25,8 @@ public interface NameDao {
 
 
     //This @Query used to delete everything in the table we created
-    @Query("DELETE FROM name_table")
-    void deleteAll();
+//    @Query("DELETE FROM name_table")
+//    void deleteAll();
 
 
 

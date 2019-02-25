@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
 
+    //Variable References to view items
     private Button addNameButton;
     private Button showNamesButton;
 
@@ -19,15 +20,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Setting variables to view Id's
         addNameButton = findViewById(R.id.add_name_button);
         showNamesButton = findViewById(R.id.view_names_button);
 
+        //Goes to setListeners method
         setListeners();
 
     }
 
+    //Sets up the onClickListeners for the buttons
     private void setListeners() {
-
+        //Sets addNameButton to go to the addName method
         addNameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Sets the showNamesButton to go to the showNames method
         showNamesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,12 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    //Creates and starts intent to go to the AddNameActivity
     protected void addName(){
         Intent addName = new Intent(this, AddNameActivity.class);
         startActivity(addName);
     }
 
+    //Creates and starts intent to go to the ViewNamesActivity
     protected void showNames(){
         Intent showNames = new Intent(this, ViewNamesActivity.class);
         startActivity(showNames);
